@@ -1,0 +1,10 @@
+= JavaLand - Finding Performance Bottlenecks with Distributed Tracing
+
+This is one of three repositories that are part of the demo for the talk
+"Finding Performance Bottlenecks with Distributed Tracing". The others are
+https://github.com/jpkrohling/javaland-boot-frontend[`javaland-boot-frontend`]
+and https://github.com/jpkrohling/javaland-swarm-backend[`javaland-swarm-backend`].
+
+== What is this demo about?
+
+Refer to the README in the https://github.com/jpkrohling/javaland-swarm-backend[`javaland-swarm-backend`].

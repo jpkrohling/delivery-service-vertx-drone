@@ -1,0 +1,42 @@
+plugins {
+  id 'application'
+  id 'com.github.johnrengelman.shadow' version '2.0.1'
+}
+
+repositories {
+  mavenLocal()
+  mavenCentral()
+}
+
+version = '1.0-SNAPSHOT'
+sourceCompatibility = '1.8'
+mainClassName = 'io.vertx.core.Launcher'
+
+def vertxVersion = '3.5.0'
+def mainVerticleName = 'eu.javaland.drone.MainVerticle'
+def watchForChange = 'src/**/*'
+def doOnChange = './gradlew classes'
+
+dependencies {
+  compile "io.vertx:vertx-core:$vertxVersion"
+  compile("org.slf4j:slf4j-api:1.7.25")
+  compile("org.slf4j:slf4j-log4j12:1.7.25")
+  compile("com.uber.jaeger:jaeger-core:0.24.1-SNAPSHOT")
+
+  testCompile "junit:junit:4.12"
+  testCompile "io.vertx:vertx-unit:$vertxVersion"
+}
+
+shadowJar {
+  classifier = 'fat'
+  manifest {
+      attributes "Main-Verticle": mainVerticleName
+  }
+  mergeServiceFiles {
+    include 'META-INF/services/io.vertx.core.spi.VerticleFactory'
+  }
+}
+
+run {
+  args = ['run', mainVerticleName, "--redeploy=$watchForChange", "--launcher-class=$mainClassName", "--on-redeploy=$doOnChange"]
+}
