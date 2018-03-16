@@ -1,4 +1,4 @@
-package eu.javaland.drone;
+package deliveryservice.drone;
 
 import com.uber.jaeger.Configuration;
 import com.uber.jaeger.samplers.ConstSampler;
@@ -24,7 +24,7 @@ import java.util.stream.Collectors;
 
 public class MainVerticle extends AbstractVerticle {
     private static final Logger logger = LoggerFactory.getLogger(MainVerticle.class);
-    private static final Tracer tracer = new Configuration("javaland-vertx-drone")
+    private static final Tracer tracer = new Configuration("delivery-service-vertx-drone")
             .withReporter(
                     new Configuration.ReporterConfiguration()
                             .withLogSpans(true)

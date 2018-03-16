@@ -13,7 +13,7 @@ sourceCompatibility = '1.8'
 mainClassName = 'io.vertx.core.Launcher'
 
 def vertxVersion = '3.5.0'
-def mainVerticleName = 'eu.javaland.drone.MainVerticle'
+def mainVerticleName = 'deliveryservice.drone.MainVerticle'
 def watchForChange = 'src/**/*'
 def doOnChange = './gradlew classes'
 

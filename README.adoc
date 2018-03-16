@@ -1,10 +1,10 @@
-= JavaLand - Finding Performance Bottlenecks with Distributed Tracing
+= Drone Delivery Service
 
-This is one of three repositories that are part of the demo for the talk
-"Finding Performance Bottlenecks with Distributed Tracing". The others are
-https://github.com/jpkrohling/javaland-boot-frontend[`javaland-boot-frontend`]
-and https://github.com/jpkrohling/javaland-swarm-backend[`javaland-swarm-backend`].
+This is one of three repositories that are part of the demo for the talk about using distributed
+tracing to find performance bottlenecks. The others are
+https://github.com/jpkrohling/delivery-service-boot-frontend[`delivery-service-boot-frontend`]
+and https://github.com/jpkrohling/delivery-service-swarm-backend[`delivery-service-swarm-backend`].
 
 == What is this demo about?
 
-Refer to the README in the https://github.com/jpkrohling/javaland-swarm-backend[`javaland-swarm-backend`].
+Refer to the README in the https://github.com/jpkrohling/delivery-service-swarm-backend[`delivery-service-swarm-backend`].
